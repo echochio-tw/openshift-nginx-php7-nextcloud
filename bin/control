@@ -16,18 +16,19 @@ function start() {
     build_config
     if [ ! -f $OPENSHIFT_REPO_DIR/ok ]; then
      cd $OPENSHIFT_REPO_DIR
-     wget https://download.owncloud.org/community/owncloud-10.0.2.zip
+     install_version="10.0.0"
+     wget https://download.nextcloud.com/server/releases/nextcloud-${install_version}.tar.bz2
      rm -rf www
-     unzip owncloud-10.0.2.zip
-     rm -rf owncloud-10.0.2.zip
-     mv owncloud www
-     wget https://raw.githubusercontent.com/echochio-tw/openshift-nginx-php7-owncloud/master/etc/autoconfig.php
+     tar jxvf nextcloud-${install_version}.tar.bz2
+     rm -rf nextcloud-${install_version}.tar.bz2
+     mv nextcloud www
+     wget https://raw.githubusercontent.com/echochio-tw/openshift-nginx-php7-nextcloud/master/etc/autoconfig.php
      mv autoconfig.php www/config/.
      rm -rf www/config/config.php
      
      mkdir $OPENSHIFT_REPO_DIR/.openshift/cron
      mkdir $OPENSHIFT_REPO_DIR/.openshift/cron/minutely
-     wget https://raw.githubusercontent.com/chio-nzgft/openshift-nginx-php7-owncloud/master/script/script.sh
+     wget https://raw.githubusercontent.com/echochio-tw/openshift-nginx-php7-nextcloud/master/script/script.sh
      cp script.sh $OPENSHIFT_REPO_DIR/.openshift/cron/minutely/owncloud.sh    
      chmod +x $OPENSHIFT_REPO_DIR/.openshift/cron/minutely/owncloud.sh
      $OPENSHIFT_CRON_DIR/bin/control restat
