@@ -1,4 +1,4 @@
-# OpenShift Nginx PHP 7 owncloud 10.0.2 Cartridge
+# OpenShift Nginx PHP 7 nextcloud 12.0.0 Cartridge
 Nginx 1.9 with PHP 7.0 owncloud  on OpenShift.
 
 * Nginx: 1.11.6
@@ -21,7 +21,7 @@ https://github.com/pinodex/openshift-cartridge-nginx-php7
 
 ### Create 
 ```
-# rhc app create owncloud10 mysql-5.5 cron http://cartreflect-claytondev.rhcloud.com/github/echochio-tw/openshift-nginx-php7-owncloud
+# rhc app create nextcloud mysql-5.5 cron http://cartreflect-claytondev.rhcloud.com/github/echochio-tw/openshift-nginx-php7-nextcloud
 ```
 ### login info
 ```
@@ -30,7 +30,7 @@ Password : admin
 
 ```
 
-### web http://owncloud10-XXXXX.rhcloud.com login
+### web http://nextcloud-XXXXX.rhcloud.com login
 
-![alt tag](https://github.com/echochio-tw/openshift-nginx-php7-owncloud/raw/master/pic/owncloud-login.png)
+![alt tag](https://github.com/echochio-tw/openshift-nginx-php7-owncloud/raw/master/pic/nextcloud-login.png)
 
