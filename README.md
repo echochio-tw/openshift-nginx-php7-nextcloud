@@ -32,5 +32,5 @@ Password : admin
 
 ### web http://nextcloud-XXXXX.rhcloud.com login
 
-![alt tag](https://github.com/echochio-tw/openshift-nginx-php7-owncloud/raw/master/pic/nextcloud-login.png)
+![alt tag](https://github.com/echochio-tw/openshift-nginx-php7-nextcloud/raw/master/pic/login.png)
 
